@@ -16,6 +16,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.MapGet("/", () => "Hello Todo API");
+
 var todos = new List<TodoGetDto>
 {
     new(1, "Learn C#", true),
@@ -43,4 +45,3 @@ app.MapPost("api/todos", (TodoPostDto dto) =>
 
 app.Run();
   
-
